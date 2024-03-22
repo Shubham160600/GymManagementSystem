@@ -1,37 +1,37 @@
 package shub.Model;
 
 public class Service {
-	private int serviceId;
+    private int serviceId;
     private String serviceName;
     private String serviceDescription;
     private double serviceFee;
-	
-	// Generate Constructor using Fields
-	
+
+    // Generate Constructor using Fields
+
     /**
-	 * @param serviceId
-	 * @param serviceName
-	 * @param serviceDescription
-	 * @param serviceFee
-	 */
-	
-	public Service(int serviceId, String serviceName, String serviceDescription, double serviceFee) {
-		super();
-		this.serviceId = serviceId;
-		this.serviceName = serviceName;
-		this.serviceDescription = serviceDescription;
-		this.serviceFee = serviceFee;
-	}
-	
-	// Generate Constructor using Fields
-	
-	/**
-	 * 
-	 */
-	public Service() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+     * @param serviceId
+     * @param serviceName
+     * @param serviceDescription
+     * @param serviceFee
+     */
+
+    public Service(int serviceId, String serviceName, String serviceDescription, double serviceFee) {
+        super();
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceDescription = serviceDescription;
+        this.serviceFee = serviceFee;
+    }
+
+    // Generate Constructor using Fields
+
+    /**
+     * 
+     */
+    public Service() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
     // Getter methods
     public int getServiceId() {

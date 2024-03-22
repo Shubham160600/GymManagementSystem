@@ -60,42 +60,42 @@ public class GymService {
     public void addMember(Member member) {
         memberDAO.addMember(member);
     }
-    
+
     public void updateMember(Member member) {
         memberDAO.updateMember(member);
     }
-    
+
     public void deleteMember(int memberId) {
         memberDAO.deleteMember(memberId);
     }
-    
-	public void addTrainer(Trainer newTrainer) {
-        trainerDAO.addTrainer(newTrainer);		
-	}
-    
+
+    public void addTrainer(Trainer newTrainer) {
+        trainerDAO.addTrainer(newTrainer);
+    }
+
     public void updateTrainer(Trainer trainer) {
         trainerDAO.updateTrainer(trainer);
     }
-    
+
     public void deleteTrainer(int trainerId) {
         trainerDAO.deleteTrainer(trainerId);
     }
-    
+
     public void updateClass(Class gymClass) {
         classDAO.updateClass(gymClass);
     }
-    
+
     public void deleteClass(int classId) {
         classDAO.deleteClass(classId);
     }
-    
+
     public void markAttendance(int memberId, int classId, Date date) {
         attendanceDAO.addAttendance(memberId, classId, date);
     }
-	
-	public void exit() {
-	    System.exit(0); // Exit the program with status code 0
-	}
+
+    public void exit() {
+        System.exit(0); // Exit the program with status code 0
+    }
 
     public List<Trainer> getAllTrainers() {
         return trainerDAO.getAllTrainers();
@@ -113,33 +113,33 @@ public class GymService {
         return attendanceDAO.getAllAttendance();
     }
 
-	@Override
-	public int hashCode() {
-		return super.hashCode();
-	}
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
-	}
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
-	}
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
-	@Override
-	public String toString() {
-		return super.toString();
-	}
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
-	@Override
-	protected void finalize() throws Throwable {
-		super.finalize();
-	}
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
 
-	public List<Class> getAllClass() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public List<Class> getAllClass() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

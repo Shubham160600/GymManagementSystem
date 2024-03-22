@@ -26,7 +26,7 @@ public class TrainerServiceImpl implements TrainerService {
     public void deleteTrainer(int trainerId) {
         trainerDAO.deleteTrainer(trainerId);
     }
-    
+
     @Override
     public void exitTrainer(int trainerId) {
         trainerDAO.exitTrainer(trainerId);
@@ -42,4 +42,3 @@ public class TrainerServiceImpl implements TrainerService {
         return trainerDAO.getAllTrainers();
     }
 }
-

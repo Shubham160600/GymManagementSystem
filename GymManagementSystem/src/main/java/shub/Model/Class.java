@@ -1,45 +1,45 @@
 package shub.Model;
 
 public class Class {
-	private int classId;
+    private int classId;
     private String className;
     private String classDescription;
     private String classSchedule;
     private Trainer trainer;
-	
-	// Generate Constructor using Fields
-	
+
+    // Generate Constructor using Fields
+
     /**
-	 * @param classId
-	 * @param className
-	 * @param classDescription
-	 * @param classSchedule
-	 * @param trainer
-	 */
-	public Class(int classId, String className, String classDescription, String classSchedule, Trainer trainer) {
-		super();
-		this.classId = classId;
-		this.className = className;
-		this.classDescription = classDescription;
-		this.classSchedule = classSchedule;
-		this.trainer = trainer;
-	}
-	
-	// Generate Constructors from Superclass
-	
-	/**
-	 * 
-	 */
-	public Class() {
-		super();
-		// TODO Auto-generated constructor stub
-	}	
+     * @param classId
+     * @param className
+     * @param classDescription
+     * @param classSchedule
+     * @param trainer
+     */
+    public Class(int classId, String className, String classDescription, String classSchedule, Trainer trainer) {
+        super();
+        this.classId = classId;
+        this.className = className;
+        this.classDescription = classDescription;
+        this.classSchedule = classSchedule;
+        this.trainer = trainer;
+    }
+
+    // Generate Constructors from Superclass
+
+    /**
+     * 
+     */
+    public Class() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
     public Class(String string, String string2, String string3) {
-		// TODO Auto-generated constructor stub
-	}
+        // TODO Auto-generated constructor stub
+    }
 
-	// Getter methods
+    // Getter methods
     public int getClassId() {
         return classId;
     }

@@ -26,7 +26,7 @@ public class PaymentServiceImpl implements PaymentService {
     public void deletePayment(int paymentId) {
         paymentDAO.deletePayment(paymentId);
     }
-    
+
     @Override
     public void exitPayment(int paymentId) {
         paymentDAO.exitPayment(paymentId);
@@ -42,4 +42,3 @@ public class PaymentServiceImpl implements PaymentService {
         return paymentDAO.getAllPayments();
     }
 }
-

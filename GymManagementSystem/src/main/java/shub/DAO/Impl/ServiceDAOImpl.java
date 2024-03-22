@@ -17,7 +17,7 @@ public class ServiceDAOImpl implements ServiceDAO {
         this.sessionFactory = sessionFactory;
     }
 
-    @Override
+    // @Override
     public void addService(GymService service) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
@@ -35,7 +35,7 @@ public class ServiceDAOImpl implements ServiceDAO {
         }
     }
 
-//    @Override
+    // @Override
     public void updateService(GymService service) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
@@ -73,7 +73,7 @@ public class ServiceDAOImpl implements ServiceDAO {
             session.close();
         }
     }
-    
+
     @Override
     public void exitService(int serviceId) {
         Session session = sessionFactory.openSession();
@@ -113,5 +113,17 @@ public class ServiceDAOImpl implements ServiceDAO {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public void addService(Service service) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void updateService(Service service) {
+        // TODO Auto-generated method stub
+
     }
 }

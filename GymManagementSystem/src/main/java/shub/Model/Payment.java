@@ -4,42 +4,42 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Payment {
-	private int paymentId;
+    private int paymentId;
     private Member member;
     private double amount;
     private LocalDate paymentDate;
-    
-	// Generate Constructor using Fields
-    
+
+    // Generate Constructor using Fields
+
     /**
-	 * @param paymentId
-	 * @param member
-	 * @param amount
-	 * @param paymentDate
-	 */
-	public Payment(int paymentId, Member member, double amount, LocalDate paymentDate) {
-		super();
-		this.paymentId = paymentId;
-		this.member = member;
-		this.amount = amount;
-		this.paymentDate = paymentDate;
-	}
+     * @param paymentId
+     * @param member
+     * @param amount
+     * @param paymentDate
+     */
+    public Payment(int paymentId, Member member, double amount, LocalDate paymentDate) {
+        super();
+        this.paymentId = paymentId;
+        this.member = member;
+        this.amount = amount;
+        this.paymentDate = paymentDate;
+    }
 
-	// Generate Constructors from Superclass
-	
-	/**
-	 * 
-	 */
-	public Payment() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
+    // Generate Constructors from Superclass
+
+    /**
+     * 
+     */
+    public Payment() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
     public Payment(int i, double d, Date date) {
-		// TODO Auto-generated constructor stub
-	}
+        // TODO Auto-generated constructor stub
+    }
 
-	// Getter methods
+    // Getter methods
     public int getPaymentId() {
         return paymentId;
     }
@@ -73,5 +73,3 @@ public class Payment {
         this.paymentDate = paymentDate;
     }
 }
-
-

@@ -72,7 +72,7 @@ public class PaymentDAOImpl implements PaymentDAO {
             session.close();
         }
     }
-    
+
     @Override
     public void exitPayment(int paymentId) {
         Session session = sessionFactory.openSession();
@@ -114,4 +114,3 @@ public class PaymentDAOImpl implements PaymentDAO {
         }
     }
 }
-

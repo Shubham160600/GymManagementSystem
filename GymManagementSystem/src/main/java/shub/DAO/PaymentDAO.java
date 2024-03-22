@@ -6,9 +6,14 @@ import shub.Model.Payment;
 
 public interface PaymentDAO {
     void addPayment(Payment payment);
+
     void updatePayment(Payment payment);
+
     void deletePayment(int paymentId);
+
     void exitPayment(int paymentId);
+
     Payment getPaymentById(int paymentId);
-    List<Payment> getAllPayments(); 
+
+    List<Payment> getAllPayments();
 }

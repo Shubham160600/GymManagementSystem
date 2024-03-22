@@ -10,7 +10,7 @@ import shub.DAO.TrainerDAO;
 import shub.Model.Trainer;
 
 public class TrainerDAOImpl implements TrainerDAO {
-	private SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     public TrainerDAOImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
@@ -72,7 +72,7 @@ public class TrainerDAOImpl implements TrainerDAO {
             session.close();
         }
     }
-    
+
     @Override
     public void exitTrainer(int trainerId) {
         Session session = sessionFactory.openSession();

@@ -25,7 +25,7 @@ public class MemberServiceImpl implements MemberService {
     public void deleteMember(int memberId) {
         memberDAO.deleteMember(memberId);
     }
-    
+
     @Override
     public void exitMember(int memberId) {
         memberDAO.exitMember(memberId);

@@ -27,7 +27,7 @@ public class ServiceServiceImpl implements ServiceService {
     public void deleteService(int serviceId) {
         serviceDAO.deleteService(serviceId);
     }
-    
+
     @Override
     public void exitService(int serviceId) {
         serviceDAO.exitService(serviceId);
@@ -37,7 +37,7 @@ public class ServiceServiceImpl implements ServiceService {
     public Service getServiceById(int serviceId) {
         return serviceDAO.getServiceById(serviceId);
     }
-    
+
     @Override
     public List<GymService> getAllServices() {
         return serviceDAO.getAllServices();

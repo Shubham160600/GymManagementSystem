@@ -12,12 +12,12 @@ public class ClassServiceImpl implements ClassService {
         this.classDAO = classDAO;
     }
 
-//    @Override
+    // @Override
     public void addClass(Class Class) {
         classDAO.addClass(Class);
     }
 
-//    @Override
+    // @Override
     public void updateClass(Class Class) {
         classDAO.updateClass(Class);
     }
@@ -26,7 +26,7 @@ public class ClassServiceImpl implements ClassService {
     public void deleteClass(int classId) {
         classDAO.deleteClass(classId);
     }
-    
+
     @Override
     public void exitClass(int classId) {
         classDAO.exitClass(classId);
@@ -42,17 +42,3 @@ public class ClassServiceImpl implements ClassService {
         return classDAO.getAllClasses();
     }
 }
-
-//	@Override
-//	public void addClass(shub.Model.Class Class) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-
-//	@Override
-//	public void updateClass(shub.Model.Class Class) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//}
-

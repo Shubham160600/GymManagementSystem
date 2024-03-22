@@ -26,7 +26,7 @@ public class AttendanceServiceImpl implements AttendanceService {
     public void deleteAttendance(int attendanceId) {
         attendanceDAO.deleteAttendance(attendanceId);
     }
-    
+
     @Override
     public void exitAttendance(int attendanceId) {
         attendanceDAO.exitAttendance(attendanceId);
@@ -42,4 +42,3 @@ public class AttendanceServiceImpl implements AttendanceService {
         return attendanceDAO.getAllAttendances();
     }
 }
-

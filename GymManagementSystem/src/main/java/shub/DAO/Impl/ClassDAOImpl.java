@@ -72,7 +72,7 @@ public class ClassDAOImpl implements ClassDAO {
             session.close();
         }
     }
-    
+
     @Override
     public void exitClass(int classId) {
         Session session = sessionFactory.openSession();
@@ -104,7 +104,7 @@ public class ClassDAOImpl implements ClassDAO {
         }
     }
 
-//    @Override
+    // @Override
     public List<Class> getAllClass() {
         try (Session session = sessionFactory.openSession()) {
             return session.createQuery("FROM Class", Class.class).list();
@@ -116,10 +116,7 @@ public class ClassDAOImpl implements ClassDAO {
 
     @Override
     public List<Class> getAllClasses() {
-    	// TODO Auto-generated method stub
-    	return null;
+        // TODO Auto-generated method stub
+        return null;
     }
 }
-
-
-

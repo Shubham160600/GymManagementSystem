@@ -5,8 +5,8 @@ import java.time.LocalDate;
 
 import shub.Enum.Gender;
 
-public class Member {	
-	private int memberId;
+public class Member {
+    private int memberId;
     private String firstName;
     private String lastName;
     private Gender gender;
@@ -15,49 +15,49 @@ public class Member {
     private String email;
     private String address;
     private LocalDate registrationDate;
-	
-	// Generate Constructor using Fields
+
+    // Generate Constructor using Fields
 
     /**
-	 * @param memberId
-	 * @param firstName
-	 * @param lastName
-	 * @param gender
-	 * @param dateOfBirth
-	 * @param contactNumber
-	 * @param email
-	 * @param address
-	 * @param registrationDate
-	 */
-	public Member(int memberId, String firstName, String lastName, Gender gender, LocalDate dateOfBirth,
-			String contactNumber, String email, String address, LocalDate registrationDate) {
-		super();
-		this.memberId = memberId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.gender = gender;
-		this.dateOfBirth = dateOfBirth;
-		this.contactNumber = contactNumber;
-		this.email = email;
-		this.address = address;
-		this.registrationDate = registrationDate;
-	}
+     * @param memberId
+     * @param firstName
+     * @param lastName
+     * @param gender
+     * @param dateOfBirth
+     * @param contactNumber
+     * @param email
+     * @param address
+     * @param registrationDate
+     */
+    public Member(int memberId, String firstName, String lastName, Gender gender, LocalDate dateOfBirth,
+            String contactNumber, String email, String address, LocalDate registrationDate) {
+        super();
+        this.memberId = memberId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.contactNumber = contactNumber;
+        this.email = email;
+        this.address = address;
+        this.registrationDate = registrationDate;
+    }
 
-	// Generate Constructors from Superclass
+    // Generate Constructors from Superclass
 
-	/**
-	 * 
-	 */
-	public Member() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * 
+     */
+    public Member() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
     public Member(String string, String string2, int i, String string3, String string4, String string5) {
-		// TODO Auto-generated constructor stub
-	}
+        // TODO Auto-generated constructor stub
+    }
 
-	// Getter methods
+    // Getter methods
     public int getMemberId() {
         return memberId;
     }
