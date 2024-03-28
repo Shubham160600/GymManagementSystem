@@ -13,26 +13,25 @@ import gym.DAO.TrainerDAO;
 import gym.Model.Trainer;
 import gym.Utility.HibernateUtil;
 
-
 public class TrainerDao implements TrainerDAO {
-	Scanner scanner = new Scanner(System.in);
-	private SessionFactory sessionFactory;
-	private TrainerDAO tdao;
-	
-	public TrainerDao() {
-		this.sessionFactory = HibernateUtil.getSessionFactory();
-		
-	}
+    Scanner scanner = new Scanner(System.in);
+    private SessionFactory sessionFactory;
+    private TrainerDAO tdao;
 
-	@Override
-	public void createTrainer(Trainer trainer) {
-		Transaction transaction = null;
+    public TrainerDao() {
+        this.sessionFactory = HibernateUtil.getSessionFactory();
+
+    }
+
+    @Override
+    public void createTrainer(Trainer trainer) {
+        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-         // Creating a new customer instance
+            // Creating a new customer instance
             Trainer newTrainer = new Trainer();
-            long tid=1;
-         // Getting input from user for customer details
+            long tid = 1;
+            // Getting input from user for customer details
             System.out.println("Enter First Name: ");
             String fName = scanner.nextLine();
             System.out.println("Enter Last Name: ");
@@ -45,7 +44,7 @@ public class TrainerDao implements TrainerDAO {
             String email = scanner.nextLine();
             System.out.println("Enter Address: ");
             String address = scanner.nextLine();
-            
+
             newTrainer.setFirstName(fName);
             newTrainer.setLastName(lName);
             newTrainer.setGender(gender);
@@ -53,32 +52,28 @@ public class TrainerDao implements TrainerDAO {
             newTrainer.setEmail(email);
             newTrainer.setAddress(address);
             newTrainer.setHireDate(new Date());
-            
-            	            
-          
-                       
-         // Saving trainer object in the database
+
+            // Saving trainer object in the database
             session.save(newTrainer);
             transaction.commit();
-            
+
             System.out.println("Trainer created successfully");
-            
+
             session.close();
-            
-           
+
         } catch (Exception e) {
-        	System.out.println("Trainer Already Exist !");
-        	System.out.println("Try again with Different Trainer ID");
+            System.out.println("Trainer Already Exist !");
+            System.out.println("Try again with Different Trainer ID");
 
             if (transaction != null) {
-            	transaction.rollback();
+                transaction.rollback();
             }
         }
-	}
+    }
 
-	@Override
-	public void updateTrainer(Trainer trainer) {
-		Transaction transaction = null;
+    @Override
+    public void updateTrainer(Trainer trainer) {
+        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             System.out.println("Enter Trainer ID to update: ");
@@ -87,7 +82,7 @@ public class TrainerDao implements TrainerDAO {
             Trainer trainerToUpdate = session.get(Trainer.class, tId);
 
             if (trainerToUpdate != null) {
-            	System.out.println("Enter updated First Name: ");
+                System.out.println("Enter updated First Name: ");
                 String fName = scanner.nextLine();
                 System.out.println("Enter updated Last Name: ");
                 String lName = scanner.nextLine();
@@ -99,38 +94,36 @@ public class TrainerDao implements TrainerDAO {
                 String email = scanner.nextLine();
                 System.out.println("Enter updated Address: ");
                 String address = scanner.nextLine();
-            
-        
+
                 trainerToUpdate.setFirstName(fName);
                 trainerToUpdate.setLastName(lName);
                 trainerToUpdate.setGender(gender);
                 trainerToUpdate.setContactNumber(cNumber);
                 trainerToUpdate.setEmail(email);
                 trainerToUpdate.setAddress(address);
-            
-                trainerToUpdate.setHireDate(new Date());
-                
-                
-	            session.save(trainerToUpdate);
-	            transaction.commit();
-	            
-	            System.out.println("Trainer updated successfully");
-            } else {
-            	System.out.println("Trainer ID" + tId + "not found");
-            }
-//            session.close();
-                       
-        } catch (Exception e) {
-        	if (transaction != null) {
-        		transaction.rollback();
-        	}
-        	e.printStackTrace();         
-        }
-	}
 
-//	@Override
-	public void deleteTrainer(long trainerId) {
-		Transaction transaction = null;
+                trainerToUpdate.setHireDate(new Date());
+
+                session.save(trainerToUpdate);
+                transaction.commit();
+
+                System.out.println("Trainer updated successfully");
+            } else {
+                System.out.println("Trainer ID" + tId + "not found");
+            }
+            // session.close();
+
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+    }
+
+    // @Override
+    public void deleteTrainer(long trainerId) {
+        Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             System.out.println("Enter trainer Id to delete: ");
@@ -151,16 +144,16 @@ public class TrainerDao implements TrainerDAO {
             }
             e.printStackTrace();
         }
-	}
+    }
 
-//	@Override
-	public List<Trainer> displayAllTrainer() {
-		try (Session session = sessionFactory.openSession()) {
+    // @Override
+    public List<Trainer> displayAllTrainer() {
+        try (Session session = sessionFactory.openSession()) {
             String hql = "from Trainer";
             Query<Trainer> q = session.createQuery(hql, Trainer.class);
             List<Trainer> trainers = q.getResultList();
             for (Trainer trainer : trainers) {
-            	System.out.println("ID: " + trainer.getId() + 
+                System.out.println("ID: " + trainer.getId() +
                         ", First Name: " + trainer.getFirstName() +
                         ", Last Name: " + trainer.getLastName() +
                         ", Gender: " + trainer.getGender() +
@@ -170,39 +163,33 @@ public class TrainerDao implements TrainerDAO {
                         ", Hire Date: " + trainer.getHireDate());
             }
             return trainers;
-            
+
         } catch (Exception e) {
-        	System.out.println("Failed to display trainers!");
+            System.out.println("Failed to display trainers!");
             e.printStackTrace();
             return null;
         }
-	}
+    }
 
-	@Override
-	public Trainer getTrainerById(long trainerId) {
-	    return tdao.getTrainerById(trainerId);
-	}
+    @Override
+    public Trainer getTrainerById(long trainerId) {
+        return tdao.getTrainerById(trainerId);
+    }
 
+    public List<Trainer> getAllTrainers() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	public List<Trainer> getAllTrainers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public void deleteTrainer(Trainer trainer) {
+        // TODO Auto-generated method stub
 
-	@Override
-	public void deleteTrainer(Trainer trainer) {
-		// TODO Auto-generated method stub
-		
-	}
+    }
 
-	@Override
-	public List<Trainer> displayAllTrainers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public List<Trainer> displayAllTrainers() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
-//	public Trainer getByTrainerId(long trainerId) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
