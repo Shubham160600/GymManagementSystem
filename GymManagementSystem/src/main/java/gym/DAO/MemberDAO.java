@@ -21,9 +21,10 @@ public interface MemberDAO {
     // Retrieve a member by their ID
     Member getMemberById(long memberId);
 
-    // Display all members (you might not need this method if it duplicates getAllMembers())
+    // Display all members (you might not need this method if it duplicates
+    // getAllMembers())
     List<Member> displayAllMembers();
 
     // Display all members (alternative method name)
-	List<Member> displayAllMember();
+    List<Member> displayAllMember();
 }

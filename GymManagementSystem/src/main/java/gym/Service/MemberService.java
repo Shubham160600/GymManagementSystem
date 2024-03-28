@@ -6,7 +6,7 @@ import gym.Model.Member;
 
 public interface MemberService {
 
-	// Create a new member
+    // Create a new member
     void createMember(Member member);
 
     // Update an existing member
@@ -21,8 +21,3 @@ public interface MemberService {
     // Retrieve a member by their ID
     Member getMemberById(long memberId);
 }
-
-
-
-
-
