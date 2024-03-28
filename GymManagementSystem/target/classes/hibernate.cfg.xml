@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-	
+
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
 <hibernate-configuration>
-
-	<session-factory>
-		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>	
-		<property name="connection.url">jdbc:mysql://localhost:3306/GymManagementSystem1</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password">root</property>
-		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
-		<property name="hbm2ddl.auto">update</property>
-
-		<property name="show_sql">true</property>
-		<property name="format_sql">true</property>
+ 
+<session-factory>
+	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gym</property>
+	<property name="hibernate.connection.username">root</property>
+	<property name="hibernate.connection.password">root</property>
+	<property name="hibernate.connection.pool_size">20</property>
+	<property name="show_sql">true</property>
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	<property name="hibernate.hbm2ddl.auto">update</property>
+	<mapping class="gym.Model.Member"/>
+	<mapping class="gym.Model.Trainer"/>
 		
-		<mapping class="shub.Model.Member"></mapping>
-		<mapping class="shub.Model.Trainer"></mapping>
-		<mapping class="shub.Model.Class"></mapping>
-		<mapping class="shub.Model.Attendance"></mapping>
-		<mapping class="shub.Model.Payment"></mapping>
-		<mapping class="shub.Model.Service"></mapping>
-
-
-</session-factory>	
-
+</session-factory>
 </hibernate-configuration>
