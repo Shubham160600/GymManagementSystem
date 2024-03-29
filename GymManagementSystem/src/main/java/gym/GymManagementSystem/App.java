@@ -69,7 +69,7 @@ public class App {
                     tService.deleteTrainer(new Trainer());
                     break;
                 case 4:
-                	List<Trainer> trainers = tService.getAllTrainers();
+                    List<Trainer> trainers = tService.getAllTrainers();
                     if (trainers != null) {
                         // Display all trainers
                         for (Trainer trainer : trainers) {
@@ -78,15 +78,6 @@ public class App {
                     } else {
                         System.out.println("There are no trainers available.");
                     }
-                	
-                	
-//                    // Call displayAllTrainers method
-//                	System.out.println("All Trainers:");
-//                    for (Trainer trainer : tService.getAllTrainers()) {
-//                        System.out.println(trainer); // Assuming Trainer class overrides toString method                 
-//                        
-//                    }
-//                    tService.getAllTrainers();
                     break;
                 case 5:
                     return; // Return to the main menu

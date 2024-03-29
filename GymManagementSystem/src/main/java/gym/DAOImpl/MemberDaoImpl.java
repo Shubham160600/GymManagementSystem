@@ -166,11 +166,6 @@ public class MemberDaoImpl implements MemberDAO {
         }
     }
 
-//    public void deleteMember(long memberId) {
-//        // TODO Auto-generated method stub
-//
-//    }
-
     // @Override
     public List<Member> displayAllMembers() {
         try (Session session = sessionFactory.openSession()) {
@@ -196,14 +191,3 @@ public class MemberDaoImpl implements MemberDAO {
         }
     }
 }
-
-
-
-
-
-//    @Override
-//    public List<Member> displayAllMember() {
-//        // TODO Auto-generated method stub
-//        return null;
-//    }
-//}

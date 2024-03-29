@@ -24,16 +24,3 @@ public interface MemberDAO {
     List<Member> getAllMembers();
 
 }
-    
-    
-    
-    
-    
-    
-//    // getAllMembers())
-//    List<Member> displayAllMembers();
-//
-//    // Display all members (alternative method name)
-//    List<Member> displayAllMember();
-
-

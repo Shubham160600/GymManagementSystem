@@ -180,16 +180,4 @@ public class TrainerDao implements TrainerDAO {
         // TODO Auto-generated method stub
         return null;
     }
-
-//    @Override
-//    public void deleteTrainer(Trainer trainer) {
-//        // TODO Auto-generated method stub
-//
-//    }
-
-//    @Override
-//    public List<Trainer> displayAllTrainers() {
-//        // TODO Auto-generated method stub
-//        return null;
-//    }
 }
