@@ -19,8 +19,8 @@ public class App {
 
         while (true) {
             System.out.println("Welcome to Gym Management System");
-            System.out.println("1. Member Management");
-            System.out.println("2. Trainer Management");
+            System.out.println("1. Trainer Management");
+            System.out.println("2. Member Management");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
@@ -36,43 +36,6 @@ public class App {
                 case 3:
                     System.out.println("Exiting Gym Management System. Goodbye!");
                     System.exit(0);
-                default:
-                    System.out.println("Invalid choice. Please enter a valid option.");
-            }
-        }
-    }
-
-    private static void memberManagement(MemberServiceImpl mService) {
-        while (true) {
-            System.out.println("Member Management");
-            System.out.println("1. Create Member");
-            System.out.println("2. Update Member");
-            System.out.println("3. Delete Member");
-            System.out.println("4. Display All Members");
-            System.out.println("5. Back to Main Menu");
-            System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
-
-            switch (choice) {
-                case 1:
-                    // Call createMember method
-                    mService.createMember(new Member());
-                    break;
-                case 2:
-                    // Call updateMember method
-                    mService.updateMember(new Member());
-                    break;
-                case 3:
-                    // Call deleteMember method
-                    mService.deleteMember(new Member());
-                    break;
-                case 4:
-                    // Call displayAllMembers method
-                    mService.displayAllMember();
-                    break;
-                case 5:
-                    return; // Return to the main menu
                 default:
                     System.out.println("Invalid choice. Please enter a valid option.");
             }
@@ -116,4 +79,40 @@ public class App {
         }
     }
 
+    private static void memberManagement(MemberServiceImpl mService) {
+        while (true) {
+            System.out.println("Member Management");
+            System.out.println("1. Create Member");
+            System.out.println("2. Update Member");
+            System.out.println("3. Delete Member");
+            System.out.println("4. Display All Members");
+            System.out.println("5. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
+
+            switch (choice) {
+                case 1:
+                    // Call createMember method
+                    mService.createMember(new Member());
+                    break;
+                case 2:
+                    // Call updateMember method
+                    mService.updateMember(new Member());
+                    break;
+                case 3:
+                    // Call deleteMember method
+                    mService.deleteMember(new Member());
+                    break;
+                case 4:
+                    // Call displayAllMembers method
+                    mService.displayAllMember();
+                    break;
+                case 5:
+                    return; // Return to the main menu
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+        }
+    }
 }
