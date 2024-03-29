@@ -122,7 +122,7 @@ public class TrainerDao implements TrainerDAO {
     }
 
     // @Override
-    public void deleteTrainer(long trainerId) {
+    public void deleteTrainer(Trainer trainer) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
@@ -147,7 +147,7 @@ public class TrainerDao implements TrainerDAO {
     }
 
     // @Override
-    public List<Trainer> displayAllTrainer() {
+    public List<Trainer> displayAllTrainers() {
         try (Session session = sessionFactory.openSession()) {
             String hql = "from Trainer";
             Query<Trainer> q = session.createQuery(hql, Trainer.class);
@@ -181,15 +181,15 @@ public class TrainerDao implements TrainerDAO {
         return null;
     }
 
-    @Override
-    public void deleteTrainer(Trainer trainer) {
-        // TODO Auto-generated method stub
+//    @Override
+//    public void deleteTrainer(Trainer trainer) {
+//        // TODO Auto-generated method stub
+//
+//    }
 
-    }
-
-    @Override
-    public List<Trainer> displayAllTrainers() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+//    @Override
+//    public List<Trainer> displayAllTrainers() {
+//        // TODO Auto-generated method stub
+//        return null;
+//    }
 }

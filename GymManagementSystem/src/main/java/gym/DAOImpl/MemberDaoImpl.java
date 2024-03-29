@@ -166,13 +166,13 @@ public class MemberDaoImpl implements MemberDAO {
         }
     }
 
-    public void deleteMember(long memberId) {
-        // TODO Auto-generated method stub
-
-    }
+//    public void deleteMember(long memberId) {
+//        // TODO Auto-generated method stub
+//
+//    }
 
     // @Override
-    public List<Member> displayAllMember() {
+    public List<Member> displayAllMembers() {
         try (Session session = sessionFactory.openSession()) {
             String hql = "from Member";
             Query<Member> q = session.createQuery(hql, Member.class);
@@ -195,10 +195,15 @@ public class MemberDaoImpl implements MemberDAO {
             return null;
         }
     }
-
-    @Override
-    public List<Member> displayAllMembers() {
-        // TODO Auto-generated method stub
-        return null;
-    }
 }
+
+
+
+
+
+//    @Override
+//    public List<Member> displayAllMember() {
+//        // TODO Auto-generated method stub
+//        return null;
+//    }
+//}

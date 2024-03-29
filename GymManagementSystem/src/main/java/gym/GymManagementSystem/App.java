@@ -1,5 +1,6 @@
 package gym.GymManagementSystem;
 
+import java.util.List;
 import java.util.Scanner;
 
 import gym.DAOImpl.TrainerDao;
@@ -68,8 +69,24 @@ public class App {
                     tService.deleteTrainer(new Trainer());
                     break;
                 case 4:
-                    // Call displayAllTrainers method
-                    tService.displayAllTrainers();
+                	List<Trainer> trainers = tService.getAllTrainers();
+                    if (trainers != null) {
+                        // Display all trainers
+                        for (Trainer trainer : trainers) {
+                            System.out.println(trainer);
+                        }
+                    } else {
+                        System.out.println("There are no trainers available.");
+                    }
+                	
+                	
+//                    // Call displayAllTrainers method
+//                	System.out.println("All Trainers:");
+//                    for (Trainer trainer : tService.getAllTrainers()) {
+//                        System.out.println(trainer); // Assuming Trainer class overrides toString method                 
+//                        
+//                    }
+//                    tService.getAllTrainers();
                     break;
                 case 5:
                     return; // Return to the main menu

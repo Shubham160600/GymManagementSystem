@@ -20,8 +20,8 @@ public class TrainerServiceImpl implements TrainerService {
 	}
 
 	// @Override
-	public void deleteTrainer(long trainerId) {
-		tdao.deleteTrainer(trainerId);
+	public void deleteTrainers(Trainer trainer) {
+		tdao.deleteTrainers(trainer);
 	}
 
 	@Override
@@ -32,10 +32,5 @@ public class TrainerServiceImpl implements TrainerService {
 	@Override
 	public Trainer getTrainerById(long trainerId) {
 		return tdao.getTrainerById(trainerId);
-	}
-
-	@Override
-	public void deleteTrainer(Trainer trainer) {
-		tdao.deleteTrainer(trainer);
 	}
 }
